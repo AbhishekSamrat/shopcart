@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Cartbag from "./Cartbag";
+import Checkout from "./Checkout";
+import Displayproduct from "./Displayproduct";
+import Productlist from "./Productlist";
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-green-400">
+      <h1 className="text-4xl text-center text-blue-800 p-3" style={{fontFamily:"fantasy"}}>OUR CART</h1>
+     <Cartbag>
+     <Productlist></Productlist>
+
+     <h1 className="text-4xl text-center text-blue-800 p-3"style={{fontFamily:"fantasy"}}>ADDED PRODUCT FROM CART</h1>
+     <Displayproduct></Displayproduct>
+     <Checkout></Checkout>
+     </Cartbag>
     </div>
   );
 }
